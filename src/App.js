@@ -1,7 +1,12 @@
 import logo from './logo.svg';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
+import { Button } from '@mui/material';
 
 function App() {
+
+  const navigate =useNavigate();
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <Button onClick={()=>navigate('/users')}>Hello</Button>
       </header>
     </div>
   );
